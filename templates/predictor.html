@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+
+{% block title %}Predictor | AI College Admission Predictor{% endblock %}
+
+{% block content %}
+<div class="predictor-container">
+    <div class="progress-container">
+        <ul class="progress-bar" id="prediction-progress">
+            <li class="active" data-step="1">Profile Type</li>
+            <li data-step="2">Academic Details</li>
+            <li data-step="3">Category & Reservation</li>
+            <li data-step="4">Preferences</li>
+            <li data-step="5">Predict</li>
+        </ul>
+    </div>
+
+    <div class="form-container" id="prediction-form-wrapper">
+        <form id="prediction-form" data-api="/api/predict">
+            <!-- Step 1: Profile Type -->
+            <div class="form-step active" id="step-1">
+                <h2>Profile Type</h2>
+                <div class="form-group">
+                    <label>Qualification</label>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">Select Qualification...</option>
+                        <option value="12th">12th / HSC</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="graduation">Graduation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Entrance Exam</label>
+                    <select id="entrance_exam" name="entrance_exam" required>
+                        <option value="">Select Exam...</option>
+                        <option value="mht-cet">MHT-CET</option>
+                        <option value="jee-main">JEE Main</option>
+                        <option value="jee-adv">JEE Advanced</option>
+                        <option value="neet">NEET</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="step-actions">
+                    <button type="button" class="btn btn-primary btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Academic Details -->
+            <div class="form-step" id="step-2">
+                <h2>Academic Details</h2>
+                <div class="form-group conditional" data-condition="qualification:12th">
+                    <label for="hsc_percentage">12th Percentage</label>
+                    <input type="number" id="hsc_percentage" name="hsc_percentage" min="0" max="100" step="0.01">
+                </div>
+                <div class="form-group conditional" data-condition="qualification:diploma">
+                    <label for="diploma_score">Diploma CGPA / Percentage</label>
+                    <input type="number" id="diploma_score" name="diploma_score" min="0" max="100" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="entrance_score">Entrance Score</label>
+                    <input type="number" id="entrance_score" name="entrance_score" min="0" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="entrance_percentile">Entrance Percentile (0-100)</label>
+                    <input type="number" id="entrance_percentile" name="entrance_percentile" min="0" max="100" step="0.0000001">
+                </div>
+                <div class="form-group">
+                    <label for="merit_rank" title="Your state merit rank in the entrance exam">Merit Rank <i class="fas fa-info-circle tooltip-icon"></i></label>
+                    <input type="number" id="merit_rank" name="merit_rank" required>
+                </div>
+                <div class="form-group">
+                    <label for="state_rank">State Rank</label>
+                    <input type="number" id="state_rank" name="state_rank">
+                </div>
+                <div class="form-group">
+                    <label for="category_rank">Category Rank (optional)</label>
+                    <input type="number" id="category_rank" name="category_rank">
+                </div>
+                <div class="form-group">
+                    <label for="home_university">Home University / Region</label>
+                    <select id="home_university" name="home_university">
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="amravati">Amravati</option>
+                        <option value="konkan">Konkan</option>
+                        <option value="nashik">Nashik</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="domicile_state">Domicile State</label>
+                    <select id="domicile_state" name="domicile_state">
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="step-actions">
+                    <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                    <button type="button" class="btn btn-primary btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Category & Reservation -->
+            <div class="form-step" id="step-3">
+                <h2>Category & Reservation</h2>
+                <p class="step-note">Category determines reservation quota and cutoff applicable to you.</p>
+                
+                <div class="form-group">
+                    <label>Category</label>
+                    <div class="radio-grid category-grid">
+                        <label><input type="radio" name="category" value="open" checked> OPEN</label>
+                        <label><input type="radio" name="category" value="obc"> OBC</label>
+                        <label><input type="radio" name="category" value="sc"> SC</label>
+                        <label><input type="radio" name="category" value="st"> ST</label>
+                        <label><input type="radio" name="category" value="ews"> EWS</label>
+                        <label><input type="radio" name="category" value="vjdt"> VJ/DT</label>
+                        <label><input type="radio" name="category" value="nta"> NT-A</label>
+                        <label><input type="radio" name="category" value="ntb"> NT-B</label>
+                        <label><input type="radio" name="category" value="ntc"> NT-C</label>
+                        <label><input type="radio" name="category" value="ntd"> NT-D</label>
+                        <label><input type="radio" name="category" value="sbc"> SBC</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-grid">
+                        <label><input type="radio" name="gender" value="male" checked> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="step-actions">
+                    <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                    <button type="button" class="btn btn-primary btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Preferences -->
+            <div class="form-step" id="step-4">
+                <h2>Preferences</h2>
+                
+                <div class="form-group">
+                    <label>Preferred Branches (Select at least one)</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="branches" value="cse"> Computer Science & Engineering</label>
+                        <label><input type="checkbox" name="branches" value="it"> Information Technology</label>
+                        <label><input type="checkbox" name="branches" value="aiml"> Artificial Intelligence & Machine Learning</label>
+                        <label><input type="checkbox" name="branches" value="aids"> AI & Data Science</label>
+                        <label><input type="checkbox" name="branches" value="ds"> Data Science</label>
+                        <label><input type="checkbox" name="branches" value="extc"> Electronics & Telecomm (EXTC)</label>
+                        <label><input type="checkbox" name="branches" value="ee"> Electronics Engineering</label>
+                        <label><input type="checkbox" name="branches" value="elec"> Electrical Engineering</label>
+                        <label><input type="checkbox" name="branches" value="mech"> Mechanical Engineering</label>
+                        <label><input type="checkbox" name="branches" value="civil"> Civil Engineering</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>College Type</label>
+                    <div class="radio-grid">
+                        <label><input type="radio" name="college_type" value="gov"> Government</label>
+                        <label><input type="radio" name="college_type" value="gov_aided"> Government-Aided</label>
+                        <label><input type="radio" name="college_type" value="autonomous"> Autonomous</label>
+                        <label><input type="radio" name="college_type" value="private"> Private</label>
+                        <label><input type="radio" name="college_type" value="any" checked> Any</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Location Preference</label>
+                    <select id="pref_state" name="pref_state">
+                        <option value="maharashtra" selected>Maharashtra</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>City Preference</label>
+                    <select id="pref_cities" name="pref_cities" multiple>
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="nashik">Nashik</option>
+                        <option value="amravati">Amravati</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div style="margin-top: 10px;">
+                        <label><input type="checkbox" id="no_loc_pref" name="no_loc_pref"> No Location Preference</label>
+                    </div>
+                </div>
+
+                <div class="step-actions">
+                    <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                    <button type="button" class="btn btn-primary btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Predict -->
+            <div class="form-step" id="step-5">
+                <h2>Review & Predict</h2>
+                <div class="summary-container" id="summary-container">
+                    <!-- Summary populated via JS -->
+                </div>
+                <div class="step-actions" style="justify-content: center; margin-top: 30px;">
+                    <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit-prediction">🔮 Predict My Admission</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Results Section (hidden initially) -->
+    <div id="results-section" class="hidden">
+        <!-- Loading Animation -->
+        <div id="loading-animation" class="loading-container">
+            <h3>Analyzing your profile...</h3>
+            <ul class="loading-steps">
+                <li class="pending">Checking academic profile</li>
+                <li class="pending">Analyzing rank compatibility</li>
+                <li class="pending">Comparing historical cutoffs</li>
+                <li class="pending">Matching preferred branches</li>
+                <li class="pending">Ranking colleges</li>
+            </ul>
+        </div>
+
+        <!-- Result Dashboard -->
+        <div id="result-dashboard" class="hidden">
+            <div class="dashboard-header">
+                <h2>Your Admission Predictions</h2>
+                <button class="btn btn-outline" id="download-report"><i class="fas fa-download"></i> Download Report</button>
+            </div>
+
+            <div class="top-cards-row">
+                <div class="result-card">
+                    <div class="outlook-score">
+                        <svg class="progress-arc" viewBox="0 0 100 50">
+                            <path class="arc-bg" d="M10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="10"/>
+                            <path class="arc-val" d="M10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="10" stroke-dasharray="125" stroke-dashoffset="30" stroke="var(--success)"/>
+                        </svg>
+                        <div class="score-text">78%</div>
+                    </div>
+                    <div class="card-label">Overall Admission Outlook</div>
+                </div>
+                <div class="result-card">
+                    <div class="card-value" id="rec-count">0</div>
+                    <div class="card-label">Recommended Colleges</div>
+                </div>
+                <div class="result-card">
+                    <div class="card-value text-primary" id="best-college">N/A</div>
+                    <div class="card-label">Best Predicted College</div>
+                </div>
+                <div class="result-card">
+                    <div class="card-value text-primary" id="best-branch">N/A</div>
+                    <div class="card-label">Best Predicted Branch</div>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <input type="text" id="search-college" placeholder="Search colleges...">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="safe">SAFE</button>
+                    <button class="filter-btn" data-filter="moderate">MODERATE</button>
+                    <button class="filter-btn" data-filter="dream">DREAM</button>
+                    <button class="filter-btn" data-filter="unlikely">UNLIKELY</button>
+                </div>
+                <select id="sort-results">
+                    <option value="probability">Sort by Probability</option>
+                    <option value="rank">Sort by Rank</option>
+                    <option value="fees">Sort by Fees</option>
+                </select>
+            </div>
+
+            <div class="college-cards-grid" id="predictions-grid">
+                <!-- Cards populated by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Panel -->
+<div class="comparison-panel" id="comparison-panel">
+    <div class="panel-header">
+        <h3>Compare Colleges (<span id="compare-count">0</span>/4)</h3>
+        <button class="close-panel"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="panel-body" id="compare-list">
+        <!-- Selected colleges go here -->
+    </div>
+    <div class="panel-footer">
+        <button class="btn btn-primary w-100" id="btn-compare-now">Compare Now</button>
+    </div>
+</div>
+
+<!-- College Detail Modal -->
+<div class="modal" id="college-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body" id="modal-content">
+            <!-- Modal content injected via JS -->
+        </div>
+    </div>
+</div>
+
+<!-- Why Recommended Modal -->
+<div class="modal" id="why-modal">
+    <div class="modal-content modal-sm">
+        <span class="close-modal">&times;</span>
+        <h2>Why Recommended?</h2>
+        <div class="modal-body" id="why-content">
+            <!-- Explanation injected via JS -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/compare.js') }}"></script>
+<script src="{{ url_for('static', filename='js/predictor.js') }}"></script>
+{% endblock %}

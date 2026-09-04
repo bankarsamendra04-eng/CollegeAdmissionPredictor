@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Colleges | AI College Admission Predictor{% endblock %}
+
+{% block content %}
+<div class="colleges-page">
+    <div class="page-header">
+        <h1>Engineering Colleges</h1>
+        <p>Browse and filter colleges based on your preferences</p>
+    </div>
+
+    <div class="colleges-layout">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <div class="filter-section">
+                <h3>Search</h3>
+                <input type="text" id="sidebar-search" class="w-100" placeholder="Search by name...">
+            </div>
+            
+            <div class="filter-section">
+                <h3>College Type</h3>
+                <label><input type="checkbox" class="filter-type-checkbox" value="gov"> Government</label>
+                <label><input type="checkbox" class="filter-type-checkbox" value="gov_aided"> Government-Aided</label>
+                <label><input type="checkbox" class="filter-type-checkbox" value="autonomous"> Autonomous</label>
+                <label><input type="checkbox" class="filter-type-checkbox" value="private"> Private</label>
+            </div>
+
+            <div class="filter-section">
+                <h3>Location</h3>
+                <select class="w-100" id="filter-state">
+                    <option value="">All States</option>
+                    <option value="maharashtra">Maharashtra</option>
+                </select>
+                <select class="w-100 mt-1" id="filter-city">
+                    <option value="">All Cities</option>
+                    <option value="pune">Pune</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="nagpur">Nagpur</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Fees (Per Year)</h3>
+                <div class="range-inputs">
+                    <input type="number" id="min-fees" placeholder="Min" class="w-100">
+                    <span>-</span>
+                    <input type="number" id="max-fees" placeholder="Max" class="w-100">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Branches Offered</h3>
+                <label><input type="checkbox" value="cse"> Computer Science</label>
+                <label><input type="checkbox" value="it"> Information Tech</label>
+                <label><input type="checkbox" value="aiml"> AI & ML</label>
+                <label><input type="checkbox" value="mech"> Mechanical</label>
+                <label><input type="checkbox" value="civil"> Civil</label>
+            </div>
+
+            <div class="filter-section">
+                <h3>Accreditation</h3>
+                <label><input type="checkbox" value="naac-a++"> NAAC A++</label>
+                <label><input type="checkbox" value="naac-a+"> NAAC A+</label>
+                <label><input type="checkbox" value="naac-a"> NAAC A</label>
+            </div>
+            
+            <button class="btn btn-primary w-100" id="apply-filters">Apply Filters</button>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-listing">
+            <div class="listing-topbar">
+                <span id="results-count">Showing 0 of 0 colleges</span>
+                <div class="sort-by">
+                    <label>Sort by:</label>
+                    <select id="college-sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="ranking">Ranking</option>
+                        <option value="fees-low">Fees (Low to High)</option>
+                        <option value="fees-high">Fees (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="colleges-grid" id="colleges-grid">
+                <!-- College Cards injected via JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Compare Bar (fixed bottom) -->
+<div class="compare-bar hidden" id="compare-bar">
+    <div class="compare-bar-content">
+        <div class="compare-chips" id="compare-chips">
+            <!-- Chips injected via JS -->
+        </div>
+        <button class="btn btn-primary" id="btn-compare-bar">Compare (<span id="compare-bar-count">0</span>)</button>
+    </div>
+</div>
+
+<!-- College Detail Modal (reused) -->
+<div class="modal" id="college-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body" id="modal-content"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/compare.js') }}"></script>
+<script src="{{ url_for('static', filename='js/colleges.js') }}"></script>
+{% endblock %}

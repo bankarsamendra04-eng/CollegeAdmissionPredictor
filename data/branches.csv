@@ -1,0 +1,108 @@
+id,college_id,branch_name,branch_code,total_seats,open_seats,obc_seats,sc_seats,st_seats,ews_seats,vjdt_seats,nt_seats,sbc_seats
+1,1,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+2,1,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+3,1,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+4,1,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+5,2,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+6,2,Information Technology,IT,60,30,11,7,4,6,0,0,2
+7,2,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+8,2,Electrical Engineering,EE,60,30,11,7,4,6,0,0,2
+9,3,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+10,3,Artificial Intelligence and Machine Learning,AIML,60,30,11,7,4,6,0,0,2
+11,3,Mechanical Engineering,MECH,120,60,22,15,8,12,1,1,1
+12,3,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+13,4,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+14,4,Information Technology,IT,60,30,11,7,4,6,0,0,2
+15,4,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+16,5,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+17,5,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+18,5,Information Technology,IT,60,30,11,7,4,6,0,0,2
+19,6,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+20,6,Information Technology,IT,120,60,22,15,8,12,1,1,1
+21,6,Artificial Intelligence and Data Science,AIDS,60,30,11,7,4,6,0,0,2
+22,7,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+23,7,Information Technology,IT,120,60,22,15,8,12,1,1,1
+24,7,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+25,8,Computer Science and Engineering,CSE,180,90,34,23,12,18,1,1,1
+26,8,Artificial Intelligence and Machine Learning,AIML,60,30,11,7,4,6,0,0,2
+27,8,Mechanical Engineering,MECH,120,60,22,15,8,12,1,1,1
+28,9,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+29,9,Information Technology,IT,120,60,22,15,8,12,1,1,1
+30,9,Electronics Engineering,ELEX,60,30,11,7,4,6,0,0,2
+31,10,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+32,10,Artificial Intelligence and Data Science,AIDS,60,30,11,7,4,6,0,0,2
+33,10,Information Technology,IT,60,30,11,7,4,6,0,0,2
+34,11,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+35,11,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+36,11,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+37,12,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+38,12,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+39,12,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+40,13,Computer Science and Engineering,CSE,180,90,34,23,12,18,1,1,1
+41,13,Information Technology,IT,60,30,11,7,4,6,0,0,2
+42,13,Data Science,DS,60,30,11,7,4,6,0,0,2
+43,14,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+44,14,Information Technology,IT,120,60,22,15,8,12,1,1,1
+45,14,Artificial Intelligence and Machine Learning,AIML,60,30,11,7,4,6,0,0,2
+46,15,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+47,15,Information Technology,IT,60,30,11,7,4,6,0,0,2
+48,15,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+49,16,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+50,16,Information Technology,IT,60,30,11,7,4,6,0,0,2
+51,16,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+52,17,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+53,17,Information Technology,IT,60,30,11,7,4,6,0,0,2
+54,17,Mechanical Engineering,MECH,120,60,22,15,8,12,1,1,1
+55,18,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+56,18,Information Technology,IT,60,30,11,7,4,6,0,0,2
+57,18,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+58,19,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+59,19,Information Technology,IT,120,60,22,15,8,12,1,1,1
+60,19,Data Science,DS,60,30,11,7,4,6,0,0,2
+61,20,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+62,20,Information Technology,IT,60,30,11,7,4,6,0,0,2
+63,20,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+64,21,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+65,21,Information Technology,IT,120,60,22,15,8,12,1,1,1
+66,21,Electronics Engineering,ELEX,60,30,11,7,4,6,0,0,2
+67,22,Computer Science and Engineering,CSE,240,120,44,30,16,24,2,2,2
+68,22,Artificial Intelligence and Machine Learning,AIML,120,60,22,15,8,12,1,1,1
+69,22,Mechanical Engineering,MECH,120,60,22,15,8,12,1,1,1
+70,23,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+71,23,Information Technology,IT,60,30,11,7,4,6,0,0,2
+72,23,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+73,24,Computer Science and Engineering,CSE,180,90,34,23,12,18,1,1,1
+74,24,Information Technology,IT,60,30,11,7,4,6,0,0,2
+75,24,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+76,25,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+77,25,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+78,25,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+79,26,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+80,26,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+81,26,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+82,27,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+83,27,Information Technology,IT,60,30,11,7,4,6,0,0,2
+84,27,Electrical Engineering,EE,60,30,11,7,4,6,0,0,2
+85,28,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+86,28,Information Technology,IT,60,30,11,7,4,6,0,0,2
+87,28,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+88,29,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+89,29,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+90,29,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+91,30,Computer Science and Engineering,CSE,120,60,22,15,8,12,1,1,1
+92,30,Information Technology,IT,60,30,11,7,4,6,0,0,2
+93,30,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+94,31,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+95,31,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+96,31,Civil Engineering,CIVIL,60,30,11,7,4,6,0,0,2
+97,32,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+98,32,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+99,32,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+100,33,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+101,33,Mechanical Engineering,MECH,60,30,11,7,4,6,0,0,2
+102,33,Electrical Engineering,EE,60,30,11,7,4,6,0,0,2
+103,34,Computer Science and Engineering,CSE,60,30,11,7,4,6,0,0,2
+104,34,Information Technology,IT,60,30,11,7,4,6,0,0,2
+105,34,Electronics and Telecommunication Engg,EXTC,60,30,11,7,4,6,0,0,2
+106,35,Data Science,DS,60,30,11,7,4,6,0,0,2
+107,35,Chemical Engineering,CHEM,120,60,22,15,8,12,1,1,1

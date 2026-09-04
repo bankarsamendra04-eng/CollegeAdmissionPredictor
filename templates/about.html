@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}About | AI College Admission Predictor{% endblock %}
+
+{% block content %}
+<div class="section-container" style="max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem;">
+    <div class="page-header text-center" style="margin-bottom: 2.5rem;">
+        <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--gray-900);">About the Platform</h1>
+        <p style="color: var(--gray-500); font-size: 1.125rem;">Intelligent guidance powered by historical cutoff analytics and machine learning</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2 style="color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-bullseye"></i> Our Mission</h2>
+        <p style="margin-bottom: 1rem; color: var(--gray-700); line-height: 1.8;">
+            Engineering college admissions across Maharashtra (MHT-CET / JEE Main) involve hundreds of colleges, multiple reservation categories, rounds of centralized admission (CAP), and shifting cutoff trends. Finding the best colleges that match a student's merit rank is often stressful and complex.
+        </p>
+        <p style="color: var(--gray-700); line-height: 1.8;">
+            The <strong>AI College Admission Predictor</strong> aims to bring transparency and data-driven clarity to students and parents by evaluating multi-year cutoff statistics, branch preferences, institutional quality, and placement metrics to provide calibrated probability estimates and actionable recommendations.
+        </p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2 style="color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-cogs"></i> How the Engine Works</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;">
+            <div style="border-left: 4px solid var(--primary); padding-left: 1rem;">
+                <h4 style="color: var(--gray-900); margin-bottom: 0.25rem;">1. Machine Learning Classification</h4>
+                <p style="color: var(--gray-700); font-size: 0.95rem;">
+                    Trained on historical student merit ranks, category quotas, branch codes, and closing trends using ensemble algorithms (Random Forest & Gradient Boosting) with probability calibration via CalibratedClassifierCV.
+                </p>
+            </div>
+            <div style="border-left: 4px solid var(--warning); padding-left: 1rem;">
+                <h4 style="color: var(--gray-900); margin-bottom: 0.25rem;">2. Rule-Based Fallback & Trend Analyzer</h4>
+                <p style="color: var(--gray-700); font-size: 0.95rem;">
+                    When specific ML feature sets are sparse, a deterministic rule-based engine compares rank ratios against historical cutoffs and adjusts for multi-year trend velocity (improving, stable, or easing cutoffs).
+                </p>
+            </div>
+            <div style="border-left: 4px solid var(--success); padding-left: 1rem;">
+                <h4 style="color: var(--gray-900); margin-bottom: 0.25rem;">3. Multi-Factor Recommendation Scoring</h4>
+                <p style="color: var(--gray-700); font-size: 0.95rem;">
+                    Recommendations are ranked through a weighted multi-attribute utility function combining admission probability, branch affinity, institutional placement record, accreditation, and location match.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2 style="color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-layer-group"></i> Categories & Classifications</h2>
+        <div class="steps-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); padding: 1rem; text-align: center;">
+                <strong style="color: var(--success); font-size: 1.1rem;">SAFE (≥ 75%)</strong>
+                <p style="font-size: 0.85rem; color: #166534; margin-top: 0.5rem;">Strong advantage. Historical closing ranks are well above your rank.</p>
+            </div>
+            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 1rem; text-align: center;">
+                <strong style="color: var(--warning); font-size: 1.1rem;">MODERATE (40-74%)</strong>
+                <p style="font-size: 0.85rem; color: #92400e; margin-top: 0.5rem;">Competitive chance. Admission possible in subsequent CAP rounds.</p>
+            </div>
+            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-sm); padding: 1rem; text-align: center;">
+                <strong style="color: var(--danger); font-size: 1.1rem;">DREAM (15-39%)</strong>
+                <p style="font-size: 0.85rem; color: #991b1b; margin-top: 0.5rem;">Ambitious target. Favorable fluctuations in cutoffs required.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); padding: 1rem; text-align: center;">
+                <strong style="color: var(--gray-500); font-size: 1.1rem;">UNLIKELY (&lt; 15%)</strong>
+                <p style="font-size: 0.85rem; color: var(--gray-700); margin-top: 0.5rem;">Highly competitive relative to merit rank.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2 style="color: var(--primary); margin-bottom: 1rem;"><i class="fab fa-github"></i> Open Source Repository</h2>
+        <p style="color: var(--gray-700); line-height: 1.8; margin-bottom: 1.25rem;">
+            This project is open-source and maintained on GitHub. You can explore the complete codebase, contribute features, submit issues, or fork the repository.
+        </p>
+        <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fab fa-github" style="font-size: 1.75rem; color: var(--gray-900);"></i>
+                <div>
+                    <strong style="color: var(--gray-900); display: block;">bankarsamendra04-eng/CollegeAdmissionPredictor</strong>
+                    <span style="color: var(--gray-500); font-size: 0.85rem;">Flask • scikit-learn • SQLite • Chart.js</span>
+                </div>
+            </div>
+            <a href="https://github.com/bankarsamendra04-eng/CollegeAdmissionPredictor" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: var(--gray-300);">
+                <i class="fas fa-external-link-alt"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center" style="margin-top: 2rem;">
+        <a href="/predictor" class="btn btn-primary btn-lg"><i class="fas fa-calculator"></i> Try the Predictor</a>
+        <a href="/colleges" class="btn btn-secondary btn-lg" style="margin-left: 1rem;"><i class="fas fa-university"></i> Explore Colleges</a>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Disclaimer | AI College Admission Predictor{% endblock %}
+
+{% block content %}
+<div class="section-container" style="max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem;">
+    <div class="page-header text-center" style="margin-bottom: 2.5rem;">
+        <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--gray-900);">Important Disclaimer</h1>
+        <p style="color: var(--gray-500); font-size: 1.125rem;">Please read carefully before relying on predictions and statistics</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem; border-left: 6px solid var(--warning);">
+        <h2 style="color: var(--warning); margin-bottom: 1rem;"><i class="fas fa-exclamation-triangle"></i> Demonstration & Advisory Use Only</h2>
+        <p style="margin-bottom: 1rem; color: var(--gray-700); line-height: 1.8;">
+            The predictions, probabilities, and recommendations provided by this AI College Admission Predictor are calculated using historical cutoff trends, statistical approximations, and machine learning models for illustrative and educational purposes.
+        </p>
+        <p style="color: var(--gray-700); line-height: 1.8;">
+            <strong>Under no circumstances does this tool guarantee admission to any college or degree program.</strong>
+        </p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h3 style="color: var(--gray-900); margin-bottom: 1rem;">Key Factors Influencing Actual Admissions</h3>
+        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+            <li><strong>Official Quotas and Reservations:</strong> Final seats depend on government reservation policies, defense quotas, PwD reservations, TFWS seats, and linguistic/religious minority statuses.</li>
+            <li><strong>Applicant Volatility:</strong> Student preference trends fluctuate each year based on industry demand, placement news, and institutional reputations.</li>
+            <li><strong>CAP Rounds & Vacancy Rounds:</strong> Spot rounds and institutional vacancy rounds have distinct eligibility rules.</li>
+            <li><strong>Seat Matrix Updates:</strong> DTE/CET Cell and AICTE may revise seat counts or introduce/merge branches prior to CAP rounds.</li>
+        </ul>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+        <h3 style="color: var(--gray-900); margin-bottom: 1rem;">Recommended Action</h3>
+        <p style="color: var(--gray-700); line-height: 1.8;">
+            Always consult official cutoff booklets, circulars, and the official admission authority portals (e.g., State CET Cell Maharashtra, JoSAA, CSAB, DTE) and verify directly with the respective college admission offices.
+        </p>
+    </div>
+
+    <div class="text-center" style="margin-top: 2rem;">
+        <a href="/" class="btn btn-primary btn-lg"><i class="fas fa-arrow-left"></i> Return to Home</a>
+    </div>
+</div>
+{% endblock %}
+

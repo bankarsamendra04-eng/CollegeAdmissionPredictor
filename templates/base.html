@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI College Admission Predictor{% endblock %}</title>
+    <meta name="description" content="AI-powered engineering college admission predictor based on historical trends.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="demo-banner">
+        ⚠️ DEMO DATA — Sample data for demonstration only. Not real admission statistics.
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i> AI College Admission Predictor
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predictor">Predictor</a></li>
+                <li><a href="/colleges">Colleges</a></li>
+                <li><a href="/compare">Compare</a></li>
+                <li><a href="/analytics">Analytics</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="https://github.com/bankarsamendra04-eng/CollegeAdmissionPredictor" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2026 AI College Admission Predictor. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/disclaimer">Disclaimer</a>
+                    <a href="https://github.com/bankarsamendra04-eng/CollegeAdmissionPredictor" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

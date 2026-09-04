@@ -1,0 +1,37 @@
+# DEMO DATA - Sample dataset for demonstration purposes only
+id,name,city,district,state,college_type,university,fees_per_year,avg_package_lpa,highest_package_lpa,accreditation,established_year,naac_grade,nba_accredited,total_seats
+1,Government College of Engineering Pune,Pune,Pune,Maharashtra,Government,Savitribai Phule Pune University,35000,8.5,35.0,AICTE,1854,A,Yes,500
+2,VJTI Mumbai,Mumbai,Mumbai City,Maharashtra,Government-Aided,Mumbai University,75000,9.0,40.0,AICTE,1887,A,Yes,600
+3,COEP Technological University,Pune,Pune,Maharashtra,Autonomous,COEP Technological University,85000,10.5,50.0,AICTE,1854,A+,Yes,800
+4,Walchand College of Engineering,Sangli,Sangli,Maharashtra,Government-Aided,Shivaji University,65000,6.5,25.0,AICTE,1947,A,Yes,450
+5,Sardar Patel Institute of Technology,Mumbai,Mumbai Suburban,Maharashtra,Autonomous,Mumbai University,150000,11.0,45.0,AICTE,1995,A,Yes,500
+6,Pune Institute of Computer Technology,Pune,Pune,Maharashtra,Private,Savitribai Phule Pune University,130000,8.0,30.0,AICTE,1983,A,Yes,700
+7,Dwarkadas J. Sanghvi College of Engineering,Mumbai,Mumbai Suburban,Maharashtra,Private,Mumbai University,180000,9.5,35.0,AICTE,1994,A+,Yes,600
+8,Vishwakarma Institute of Technology,Pune,Pune,Maharashtra,Autonomous,Savitribai Phule Pune University,170000,7.0,28.0,AICTE,1983,A++,Yes,850
+9,KJ Somaiya College of Engineering,Mumbai,Mumbai Suburban,Maharashtra,Autonomous,Somaiya Vidyavihar University,200000,8.5,35.0,AICTE,1983,A,Yes,750
+10,Thadomal Shahani Engineering College,Mumbai,Mumbai Suburban,Maharashtra,Private,Mumbai University,160000,7.5,30.0,AICTE,1983,B+,Yes,500
+11,Government College of Engineering Aurangabad,Aurangabad,Aurangabad,Maharashtra,Government,Dr. Babasaheb Ambedkar Marathwada University,40000,5.0,15.0,AICTE,1960,B+,Yes,400
+12,Government College of Engineering Amravati,Amravati,Amravati,Maharashtra,Government,Sant Gadge Baba Amravati University,45000,5.5,18.0,AICTE,1964,A,Yes,400
+13,Shri Ramdeobaba College of Engineering and Management,Nagpur,Nagpur,Maharashtra,Autonomous,Rashtrasant Tukadoji Maharaj Nagpur University,150000,7.0,25.0,AICTE,1984,A+,Yes,900
+14,Pimpri Chinchwad College of Engineering,Pune,Pune,Maharashtra,Private,Savitribai Phule Pune University,140000,6.5,24.0,AICTE,1999,A,Yes,700
+15,Fr. Conceicao Rodrigues College of Engineering,Mumbai,Mumbai Suburban,Maharashtra,Private,Mumbai University,160000,6.0,20.0,AICTE,1984,A,Yes,450
+16,Cummins College of Engineering for Women,Pune,Pune,Maharashtra,Autonomous,Savitribai Phule Pune University,160000,7.5,30.0,AICTE,1991,A,Yes,600
+17,Vishwakarma Institute of Information Technology,Pune,Pune,Maharashtra,Autonomous,Savitribai Phule Pune University,150000,6.5,22.0,AICTE,1998,A,Yes,700
+18,Yeshwantrao Chavan College of Engineering,Nagpur,Nagpur,Maharashtra,Autonomous,Rashtrasant Tukadoji Maharaj Nagpur University,140000,5.5,18.0,AICTE,1984,A,Yes,800
+19,Thakur College of Engineering and Technology,Mumbai,Mumbai Suburban,Maharashtra,Autonomous,Mumbai University,150000,6.0,20.0,AICTE,2001,A,Yes,600
+20,Rajiv Gandhi Institute of Technology,Mumbai,Mumbai Suburban,Maharashtra,Private,Mumbai University,130000,5.0,15.0,AICTE,1992,B+,No,500
+21,Vidyalankar Institute of Technology,Mumbai,Mumbai City,Maharashtra,Private,Mumbai University,140000,5.5,18.0,AICTE,1999,A,Yes,600
+22,MIT World Peace University,Pune,Pune,Maharashtra,Private,MIT-WPU,300000,8.0,40.0,AICTE,1983,A,Yes,1000
+23,Symbiosis Institute of Technology,Pune,Pune,Maharashtra,Private,Symbiosis International University,250000,8.5,35.0,AICTE,2008,A,Yes,800
+24,G. H. Raisoni College of Engineering,Nagpur,Nagpur,Maharashtra,Autonomous,Rashtrasant Tukadoji Maharaj Nagpur University,160000,5.0,15.0,AICTE,1998,A+,Yes,700
+25,DKTE Society's Textile and Engineering Institute,Ichalkaranji,Kolhapur,Maharashtra,Autonomous,Shivaji University,120000,4.5,12.0,AICTE,1982,A+,Yes,600
+26,Government College of Engineering Karad,Karad,Satara,Maharashtra,Government,Shivaji University,50000,5.5,18.0,AICTE,1960,A,Yes,400
+27,Rajarambapu Institute of Technology,Islampur,Sangli,Maharashtra,Autonomous,Shivaji University,120000,5.0,15.0,AICTE,1983,A,Yes,500
+28,K. K. Wagh Institute of Engineering Education & Research,Nashik,Nashik,Maharashtra,Autonomous,Savitribai Phule Pune University,130000,5.0,15.0,AICTE,1984,A,Yes,700
+29,Sanjeevan Engineering and Technology Institute,Panhala,Kolhapur,Maharashtra,Private,Shivaji University,100000,4.0,10.0,AICTE,2009,B,No,400
+30,Sanjivani Rural Education Society's College of Engineering,Kopargaon,Ahmednagar,Maharashtra,Autonomous,Savitribai Phule Pune University,120000,4.5,12.0,AICTE,1983,A,Yes,500
+31,Government College of Engineering Jalgaon,Jalgaon,Jalgaon,Maharashtra,Government,Kavayitri Bahinabai Chaudhari North Maharashtra University,45000,4.5,12.0,AICTE,1996,B+,Yes,350
+32,Government College of Engineering Nagpur,Nagpur,Nagpur,Maharashtra,Government,Rashtrasant Tukadoji Maharaj Nagpur University,50000,6.0,20.0,AICTE,2016,B,No,350
+33,Government College of Engineering Chandrapur,Chandrapur,Chandrapur,Maharashtra,Government,Gondwana University,45000,4.0,10.0,AICTE,1996,B,No,350
+34,Usha Mittal Institute of Technology,Mumbai,Mumbai Suburban,Maharashtra,University Department,SNDT Women's University,90000,5.0,15.0,AICTE,1997,A,Yes,400
+35,Institute of Chemical Technology,Mumbai,Mumbai City,Maharashtra,Autonomous,Institute of Chemical Technology,85000,10.0,40.0,AICTE,1933,A++,Yes,300

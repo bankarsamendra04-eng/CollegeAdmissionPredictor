@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Analytics | AI College Admission Predictor{% endblock %}
+
+{% block content %}
+<div class="analytics-page">
+    <div class="page-header text-center">
+        <h1>Admission Analytics</h1>
+        <p>Historical cutoff trends and admission statistics</p>
+    </div>
+
+    <div class="analytics-filters card">
+        <div class="filter-row">
+            <div class="form-group mb-0">
+                <label>College</label>
+                <select id="analytics-college" class="w-100">
+                    <option value="all">All Top Colleges</option>
+                    <option value="coep">COEP Pune</option>
+                    <option value="vjti">VJTI Mumbai</option>
+                    <option value="pict">PICT Pune</option>
+                </select>
+            </div>
+            <div class="form-group mb-0">
+                <label>Branch</label>
+                <select id="analytics-branch" class="w-100">
+                    <option value="all">All Branches</option>
+                    <option value="cse">Computer Science</option>
+                    <option value="it">Information Tech</option>
+                </select>
+            </div>
+            <div class="form-group mb-0">
+                <label>Category</label>
+                <select id="analytics-category" class="w-100">
+                    <option value="open">OPEN</option>
+                    <option value="obc">OBC</option>
+                    <option value="sc">SC</option>
+                </select>
+            </div>
+            <div class="form-group mb-0">
+                <label>Year Range</label>
+                <select id="analytics-years" class="w-100">
+                    <option value="2022-2024">2022 - 2024</option>
+                </select>
+            </div>
+            <div class="form-group mb-0 d-flex align-items-end">
+                <button class="btn btn-primary w-100" id="update-analytics">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="charts-grid mt-4">
+        <div class="chart-card">
+            <h3>Closing Rank Trends</h3>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3>Branch-wise Closing Ranks</h3>
+            <div class="chart-container">
+                <canvas id="branchChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3>College Type Distribution</h3>
+            <div class="chart-container">
+                <canvas id="typeChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3>Package vs Cutoff Scatter</h3>
+            <div class="chart-container">
+                <canvas id="scatterChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-table-section mt-4 card">
+        <h3>Historical Cutoff Statistics</h3>
+        <div class="table-responsive" id="analytics-table-container">
+            <table class="data-table" id="analytics-table">
+                <thead>
+                    <tr>
+                        <th>College</th>
+                        <th>Branch</th>
+                        <th>Year</th>
+                        <th>Category</th>
+                        <th>Closing Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 20px; color: var(--gray-500);">Loading cutoff statistics...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
+{% endblock %}
